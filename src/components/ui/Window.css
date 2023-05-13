@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'MS Sans Serif';
+    src: local('MS Sans Serif'), 
+    url('fonts/ms-sans-serif-1.otf') format('opentype')
+}
+
+.window {
+    position: absolute;
+    background-color: #c0c0c0;
+    padding: 2px;
+    
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid rgb(57, 57, 57); 
+    border-right: 3px solid rgb(57, 57, 57);
+}
+
+.window-header {
+    padding-left: 5px;
+    height: 35px;
+    width: 99%;
+}
+
+.window-header-title {
+    position: absolute;
+    text-align: center;
+    line-height: 32px;
+    left: 0px;
+    margin-left: 5px;
+    padding: 3px;
+
+    color: white;
+    font-size: large;
+}
+
+.window-header-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: 0px;
+}
+
+.inactive {
+    background-color: #808080;
+}
+
+.active {
+    background-color: #01017d;
+}

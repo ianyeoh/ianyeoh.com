@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Vastantonius';
+    src: local('Vastantonius'), 
+    url('fonts/Vastantonius.ttf') format('truetype')
+}
+
+.taskbar {
+    background-color: #c1c1c1;
+    width: 100%;
+    height: 33px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    border-top: 2px solid #edecec;
+    outline: 2px solid #369292;
+}
+
+.taskbar-child {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.taskbar-start-btn {
+    width: 90px;
+    margin-left: 5px;
+
+    text-align: center;
+    line-height: 21px;
+
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: bold;
+
+    border-top: 1px solid #d8d9db;
+    border-left: 1px solid #d8d9db;
+    border-bottom: 2px solid #868a8c;
+    border-right: 2px solid #868a8c;
+    outline: 2px outset #969696;
+}
+
+.taskbar-start-btn-open {
+    outline: 2px inset #969696;
+}
+
+.taskbar-start-menu {
+    position: absolute;
+    bottom: 100%;
+    background-color: #c1c1c1;
+    border-top: 3px outset #e0e0e0;
+    border-left: 3px outset #e0e0e0;
+    border-bottom: 3px solid #4b4b4b;
+    border-right: 3px solid #4b4b4b;
+    padding: 5px;
+}
+
+.taskbar-start-menu-child {
+    position: relative;
+    max-height: 260px;
+}
+
+.taskbar-start-menu-sidebar {
+    font-family: 'Vastantonius';
+    line-height: 40px;
+    height: 100%;
+    background-color: #808080;
+    float: left;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    font-size: x-large;
+    padding-top: 15px;
+}
+
+.taskbar-start-menu-content {
+    background-color: inherit;
+    float: right;
+    margin-left: 6px;
+}
+
+.taskbar-start-menu-row {
+    padding-left: 10px;
+    font-size: large;
+    width: 250px;
+}
+
+.taskbar-start-menu-row:hover {
+    background-color: #01017d;
+    color: rgb(212, 212, 212);
+}
+
+.taskbar-clock {
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    text-align: center;
+    line-height: 26px;
+    outline: 2px inset #b2b2b2;
+    margin-right: 5px;
+}
+
+img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+hr {
+    border: 2px inset#dfdfdf;
+}
+
+span.strong {
+    font-weight: 900;
+    color: #c0c0c0;
+}
+
+span.light {
+    font-weight: normal;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

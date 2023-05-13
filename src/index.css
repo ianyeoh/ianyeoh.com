@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'MS Sans Serif';
+    src: local('MS Sans Serif'), 
+    url('fonts/ms-sans-serif-1.otf') format('opentype')
+}
+
+:root {
+    font-family: 'MS Sans Serif';
+    background-color: #00807F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 300px;
+    min-height: 300px;
+    overflow: hidden;
+}

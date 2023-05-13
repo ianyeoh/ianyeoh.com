@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Vastantonius';
+    src: local('Vastantonius'), 
+    url('fonts/Vastantonius.ttf') format('truetype')
+}
+
+.header {
+    font-family: 'Vastantonius';
+}
+
+.normal {
+    font-weight: 100;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+.window-body {
+    padding: 20px;
+    height: fit-content;
+}
+
+.inset-border {
+    border: 2px inset rgb(238, 238, 238);
+}
+
+.outset-border {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid rgb(57, 57, 57); 
+    border-right: 2px solid rgb(57, 57, 57);
+}
+
+.stick-right {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+.float-left {
+    float: left;
+}
+    
+.float-right {
+    float: right;
+}
+
+.email {
+    margin-left: 50px;
+    line-height: 32px;
+}
+
+.arrange-horizontally {
+    display: flex;
+}
+
+.shutdown-text {
+    margin: 12px;
+    padding-left: 10px;
+}
+
+.shutdown-buttons {
+    margin-top: 5px;
+    margin-right: 20px;
+    float: right;
+}
+
+.shutdown-button {
+    background-color: transparent;
+    margin: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+}
+
+.shutdown-button:active {
+    border: 2px inset rgb(238, 238, 238);
+}
+
+/* .tabs {
+
+} */
+
+.tab-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid rgb(57, 57, 57);
+}
+
+.tab-selected {
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 3px solid #c0c0c0; 
+    border-right: 4px solid rgb(57, 57, 57);
+}
+
+.tab-panel-selected {
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid rgb(57, 57, 57); 
+    border-right: 3px solid rgb(57, 57, 57);
+
+    padding: 10px;
+}
+
+.shutdown {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.window-explorer {
+    background-color: white;
+    margin: 5px;
+
+    border-top: 2px solid rgb(57, 57, 57);
+    border-left: 2px solid rgb(57, 57, 57);
+    border-bottom: 2px solid white; 
+    border-right: 2px solid white;
+    height: 400px;
+}
+
+.window-explorer-nested {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid #d4d3d3; 
+    border-right: 2px solid #d4d3d3;
+    height: 396px;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+}
