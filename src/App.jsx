@@ -249,7 +249,7 @@ function App() {
                                         <br/><br/>
                                         I built this site in React.js over a couple of days. If you're interested,
                                         you can find the source code 
-                                        <a href='https://gitlab.ianyeoh.com/ianyeoh/ianyeoh.com' target='_blank'> <span className='link'>here.</span></a>
+                                        <a href='https://github.com/ianyeoh/ianyeoh.com' target='_blank'> <span className='link'>here.</span></a>
                                     </p>
 
                                 </TabPanel>
