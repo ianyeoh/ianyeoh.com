@@ -2,7 +2,7 @@
     font-family: 'MS Sans Serif';
     font-weight: bold;
     src: local('MS Sans Serif'), 
-    url('fonts/Windows Regular.ttf') format('truetype')
+    url('/fonts/ms-sans-serif-1.ttf') format('truetype')
 }
 
 .window {
