@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MS Sans Serif';
     src: local('MS Sans Serif'), 
-    url('fonts/MS_Sans_Serif.woff2') format('woff2')
+    url('fonts/Windows Regular.ttf') format('truetype')
 }
 
 :root {
