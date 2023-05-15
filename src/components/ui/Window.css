@@ -9,6 +9,9 @@
     background-color: #c0c0c0;
     padding: 2px;
     
+    height: fit-content;
+    width: fit-content;
+    
     border-top: 3px solid white;
     border-left: 3px solid white;
     border-bottom: 3px solid rgb(57, 57, 57); 

@@ -149,7 +149,7 @@ function App() {
 
     return (
         !shutDown ? (
-            <div>
+            <div className='desktop'>
                 {/* Desktop icons */}
                 <OutsideAlerter callback={() => clickIcon(null)}>
                     <DesktopIcon id='welcome' style={{
@@ -193,10 +193,7 @@ function App() {
                 <OutsideAlerter callback={() => setFocus(null)}>
                     <Window id='welcome' visible={visibleWindows.welcome}
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
-                    style={{
-                        zIndex: zIndex.welcome,
-                        width:'620px', height:'600px', top:'100px', left:'100px'
-                    }}>
+                    style={{zIndex: zIndex.welcome}}>
                         <WindowHeader onClose={() => closeWindow('welcome')} active={inFocus.welcome}>
                             Welcome 
                         </WindowHeader>
@@ -212,10 +209,7 @@ function App() {
 
                     <Window id='aboutme' visible={visibleWindows.aboutme}
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
-                    style={{
-                        zIndex: zIndex.aboutme,
-                        width:'520px', height:'560px', top:'110px', left:'110px'
-                    }}>
+                    style={{zIndex: zIndex.aboutme}}>
                         <WindowHeader onClose={() => closeWindow('aboutme')} active={inFocus.aboutme}>
                             About Me
                         </WindowHeader>
@@ -230,24 +224,24 @@ function App() {
                                 <TabPanel className='tab-panel'>
                                     <h2>Hello, I'm Ian.</h2>
                                     <p>
-                                        I'm based in Sydney, Australia and I'm currently in my penultimate
-                                        year studying a Bachelor of Software Engineering (Honours) at UNSW.
+                                        I'm based in Sydney, Australia and I'm currently in my penultimate <br/>
+                                        year studying a Bachelor of Software Engineering (Honours) at UNSW. <br/>
                                     </p>
 
                                     <h3>What I do</h3>
                                     <p>
-                                        Currently, I'm studying full-time while looking for any software engineering
-                                        related employment opportunities that may come my way.
+                                        Currently, I'm studying full-time while looking for any software engineering <br/>
+                                        related employment opportunities that may come my way. <br/>
                                     </p>
 
                                     <h3>This site</h3>
                                     <p>
-                                        You might have noticed this site is reminiscent of the Windows 95 default desktop. 
-                                        While admittedly the oldest version of Windows I've ever used is XP, I've always 
-                                        been a fan of the graphical interfaces of early operating systems and their use of 
+                                        You might have noticed this site is reminiscent of the Windows 95 default desktop. <br/> 
+                                        While admittedly the oldest version of Windows I've ever used is XP, I've always <br/>
+                                        been a fan of the graphical interfaces of early operating systems and their use of <br/>
                                         the limited technology of the time.
                                         <br/><br/>
-                                        I built this site in React.js over a couple of days. If you're interested,
+                                        I built this site in React.js over a couple of days. If you're interested, <br/>
                                         you can find the source code 
                                         <a href='https://gitlab.ianyeoh.com/ianyeoh/ianyeoh-com' target='_blank'> <span className='link'>here.</span></a>
                                     </p>
@@ -257,12 +251,12 @@ function App() {
                                 <TabPanel className='tab-panel'>
                                     <h2>Experience</h2>
                                     <p>
-                                        I've worked previously in IT in both internships and paid roles as a Systems
-                                        Administrator intern and also re-cycling and re-deploying used IT assets, respectively.
+                                        I've worked previously in IT in both internships and paid roles as a Systems <br/>
+                                        Administrator intern and also re-cycling and re-deploying used IT assets, respectively. <br/>
                                         <br/><br/>
-                                        Apart from that, I have significant (3+ years) experience in web development from working on
-                                        personal projects. In my spare time, I also enjoy working on DIY projects programming 
-                                        microprocessors and microcontrollers to automate things in my life.
+                                        Apart from that, I have significant (3+ years) experience in web development from working on <br/>
+                                        personal projects. In my spare time, I also enjoy working on DIY projects programming <br/>
+                                        microprocessors and microcontrollers to automate things in my life. <br/>
                                     </p>
                                 </TabPanel>
 
@@ -292,7 +286,7 @@ function App() {
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
                     style={{
                         zIndex: zIndex.myprojects,
-                        width:'500px', height:'450px', top:'120px', left:'120px'
+                        width:'500px', height:'450px'
                     }}>
                         <WindowHeader onClose={() => closeWindow('myprojects')} active={inFocus.myprojects}>
                             <img src={MyProjectsIcon} alt='a computer' width='25px'/>
@@ -314,10 +308,7 @@ function App() {
 
                     <Window id='contactme' visible={visibleWindows.contactme}
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
-                    style={{
-                        zIndex: zIndex.contactme,
-                        width:'250px', height:'200px', top:'130px', left:'130px'
-                    }}>
+                    style={{zIndex: zIndex.contactme}}>
                         <WindowHeader onClose={() => closeWindow('contactme')} active={inFocus.contactme}>
                             Contact Me
                         </WindowHeader>
@@ -335,10 +326,7 @@ function App() {
 
                     <Window id='shutdown' visible={visibleWindows.shutdown}
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
-                    style={{
-                        zIndex: zIndex.shutdown,
-                        width:'480px', height:'160px', top:'140px', left:'140px'
-                    }}>
+                    style={{zIndex: zIndex.shutdown}}>
                         <WindowHeader onClose={() => closeWindow('shutdown')} active={inFocus.shutdown}>
                             Shut Down Windows
                         </WindowHeader>
@@ -360,7 +348,7 @@ function App() {
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
                     style={{
                         zIndex: zIndex.recycle,
-                        width:'500px', height:'450px', top:'140px', left:'140px'
+                        width:'500px', height:'450px'
                     }}>
                         <WindowHeader onClose={() => closeWindow('recycle')} active={inFocus.recycle}>
                             Recycle Bin
@@ -371,7 +359,7 @@ function App() {
                         </div>
                     </Window>
                 </OutsideAlerter>
-
+                
                 {/* The taskbar */}
                 <Taskbar style={{zIndex: 2147483647}}
                 handleAboutMe={() => openWindow('aboutme')}

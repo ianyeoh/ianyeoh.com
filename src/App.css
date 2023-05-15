@@ -4,6 +4,11 @@
     url('fonts/Vastantonius.ttf') format('truetype')
 }
 
+.desktop {
+    min-height: 300px;
+    min-width: 300px;
+}
+
 .header {
     font-family: 'Vastantonius';
 }

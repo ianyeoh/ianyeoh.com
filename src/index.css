@@ -4,17 +4,14 @@
     url('/fonts/ms-sans-serif-1.otf') format('opentype')
 }
 
-:root {
+html, body, :root, :root, .desktop {
     font-family: 'MS Sans Serif';
     background-color: #00807F;
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
+    margin: 0px;
+    padding: 0px;
     height: 100vh;
-    min-width: 300px;
-    min-height: 300px;
+    width: 100vw;
     overflow: hidden;
+    position: relative;
 }
