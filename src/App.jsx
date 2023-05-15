@@ -8,12 +8,14 @@ import { DesktopIcon, IconImg, IconLabel } from './components/ui/DesktopIcon'
 import DidYouKnowIcon from '/img/didyouknow.png'
 import MessageIcon from '/icons/message.png'
 import MyProjectsIcon from '/icons/myprojects.png'
-import RecycleBinIcon from '/icons/recycle-bin.png'
-import ComputerIcon from '/icons/computer.png'
+import RecycleBinEmptyIcon from '/icons/recycle-bin-empty.png'
+import RecycleBinFullIcon from '/icons/recycle-bin-full.png'
 import DirectoryIcon from '/icons/directory.png'
 import HelpBookIcon from '/icons/help-book.png'
 import NotepadIcon from '/icons/notepad.png'
 import ShutdownComputerIcon from '/icons/shutdown-computer.png'
+import PaintIcon from '/icons/paint.png'
+import MSIEIcon from '/icons/msie.png'
 
 function App() {
     const [shutDown, setShutDown] = useState(false);
@@ -55,7 +57,7 @@ function App() {
      * the max value on open.
      */
     const [zIndex, setZIndex] = useState({
-        'max': 3,
+        'max': 1,
     });
 
     /* 
@@ -147,6 +149,13 @@ function App() {
         setVisibleWindows(newVisibility);
     }
 
+    function openInNewTab(url) {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) {
+            newWindow.opener = null;
+        }
+    }
+
     return (
         !shutDown ? (
             <div className='desktop'>
@@ -184,7 +193,7 @@ function App() {
                         right: '0px',
                     }} onClick={(e) => clickIcon(e.currentTarget.id)}
                     onDoubleClick={(e) => doubleClickIcon(e.currentTarget.id)}>
-                        <IconImg src={RecycleBinIcon} alt='recycle bin' clicked={clickedIcon.recycle}/>
+                        <IconImg src={RecycleBinFullIcon} alt='recycle bin' clicked={clickedIcon.recycle}/>
                         <IconLabel clicked={clickedIcon.recycle}>Recycle Bin</IconLabel>
                     </DesktopIcon>
                 </OutsideAlerter>
@@ -294,18 +303,21 @@ function App() {
                         </WindowHeader>
                         <div className='window-explorer'>
                             <div className='window-explorer-nested'>
-                                {/* <DesktopIcon id='welcome' style={{
-                                    top: '50px',
-                                    left: '5px',
+                                <DesktopIcon id='smallurl' style={{
+                                    top: '45px',
+                                    left: '10px',
                                 }} onClick={(e) => clickIcon(e.currentTarget.id)}
-                                onDoubleClick={(e) => doubleClickIcon(e.currentTarget.id)}>
-                                    <IconImg src={HelpBookIcon} alt='help book' clicked={clickedIcon.welcome}/>
-                                    <IconLabel clicked={clickedIcon.welcome} style={{color: 'black'}}>Help</IconLabel>
-                                </DesktopIcon> */}
+                                onDoubleClick={(e) => {
+                                    doubleClickIcon(e.currentTarget.id);
+                                    openInNewTab('https://www.smallurl.cc')
+                                }}>
+                                    <IconImg src={MSIEIcon} alt='internet explorer icon' clicked={clickedIcon.smallurl}/>
+                                    <IconLabel clicked={clickedIcon.smallurl} color='black'>SmallURL</IconLabel>
+                                </DesktopIcon>
                             </div>
                         </div>
                     </Window>
-
+                    
                     <Window id='contactme' visible={visibleWindows.contactme}
                     handleClick={(e) => setFocus(e.currentTarget.id)} 
                     style={{zIndex: zIndex.contactme}}>
@@ -355,8 +367,34 @@ function App() {
                         </WindowHeader>
                         <div className='window-explorer'>
                             <div className='window-explorer-nested'>
+                                <DesktopIcon id='paint' style={{
+                                    top: '45px',
+                                    left: '10px',
+                                }} onClick={(e) => clickIcon(e.currentTarget.id)}
+                                onDoubleClick={(e) => doubleClickIcon(e.currentTarget.id)}>
+                                    <IconImg src={PaintIcon} alt='paint icon' clicked={clickedIcon.welcome}/>
+                                    <IconLabel clicked={clickedIcon.paint} color='black'>Paint</IconLabel>
+                                </DesktopIcon>
                             </div>
                         </div>
+                    </Window>
+
+                    <Window id='paint' visible={visibleWindows.paint}
+                    handleClick={(e) => setFocus(e.currentTarget.id)} 
+                    style={{
+                        zIndex: zIndex.paint,
+                        width:'500px', height:'450px'
+                    }}>
+                        <WindowHeader onClose={() => closeWindow('paint')} active={inFocus.paint}>
+                            untitled - Paint
+                        </WindowHeader>
+                        <iframe src="https://jspaint.app" width="99%" height="85%"/>
+                        <p className='float-right margin-0'>
+                            <a href='https://github.com/1j01/jspaint' target='_blank' className='link'>
+                                JSPaint
+                            </a>
+                            , by 1j01
+                        </p>
                     </Window>
                 </OutsideAlerter>
                 

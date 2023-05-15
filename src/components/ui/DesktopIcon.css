@@ -21,7 +21,14 @@
     margin: auto;
     padding: auto;
     font-size: 14px;
+}
+
+.white-label {
     color: rgb(255, 255, 255);
+}
+
+.black-label {
+    color: black;
 }
 
 .clicked-img {

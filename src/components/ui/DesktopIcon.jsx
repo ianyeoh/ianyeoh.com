@@ -20,7 +20,9 @@ export function IconImg(props) {
 
 export function IconLabel(props) {
     return (
-        <p className={`icon-label ${props.clicked && 'clicked-label'}`} style={props.style}>
+        <p className={`icon-label ${props.clicked && 'clicked-label'} 
+        ${props.color === 'black' ? 'black-label': 'white-label'}`} 
+        style={props.style}>
             {props.children}
         </p>
     )
